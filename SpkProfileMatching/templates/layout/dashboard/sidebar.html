@@ -1,0 +1,133 @@
+{% load staticfiles %}
+<aside class="main-sidebar">
+<!-- sidebar: style can be found in sidebar.less -->
+<section class="sidebar" style="height: auto;">
+    <!-- Sidebar user panel -->
+
+    <!-- search form -->
+
+    <!-- /.search form -->
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="sidebar-menu tree" data-widget="tree">
+        <li class="header" align="center">MAIN NAVIGATION</li>
+        <li>
+            <a href="{% url 'admin:index' %}">
+                <i class="fa fa-user"></i> Admin Site</a>
+        </li>
+        <li class="header"></li>
+        <li>
+            <a href="{% url 'karyawan:view' %}">
+                <i class="fa fa-user"></i> karyawan</a>
+        </li>
+        <li class="header"></li>
+        <li class="treeview menu-open">
+            <a href="#">
+                <i class="fa fa-database" aria-hidden="true"></i><span>Kecerdasan</span>
+                <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+            </a>
+            <ul class="treeview-menu" style="display: block;">
+                <li><a href="{% url 'kecerdasan:view' %}"><i class="fa fa-circle-o"></i> Nilai Kecerdasan</a></li>
+                <li><a href="{% url 'kecerdasan:cf' %}"><i class="fa fa-circle-o"></i> Nilai Core Factor </a></li>
+                <li><a href="{% url 'kecerdasan:sf' %}"><i class="fa fa-circle-o"></i> Nilai Secondary Factor </a></li>
+                <li><a href="{% url 'kecerdasan:totalcf' %}"><i class="fa fa-circle-o"></i> Hasil CF </a></li>
+                <li><a href="{% url 'kecerdasan:totalsf' %}"><i class="fa fa-circle-o"></i> Hasil SF </a></li>
+                <li><a href="{% url 'kecerdasan:total' %}"><i class="fa fa-circle-o"></i> Nilai Total </a></li>
+
+                
+            </ul>
+        </li>
+        <li class="treeview menu-open">
+            <a href="#">
+                <i class="fa fa-database" aria-hidden="true"></i><span>Masa Kerja</span>
+                <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+            </a>
+            <ul class="treeview-menu" style="display: block;">
+                
+                <li><a href="{% url 'masakerja:view' %}"><i class="fa fa-circle-o"></i> Nilai Masa Kerja </a></li>
+                <li><a href="{% url 'masakerja:cf' %}"><i class="fa fa-circle-o"></i> Nilai Core Factor </a></li>
+                <li><a href="{% url 'masakerja:sf' %}"><i class="fa fa-circle-o"></i> Nilai Secondary Factor </a></li>
+                <li><a href="{% url 'masakerja:totalcf' %}"><i class="fa fa-circle-o"></i> Hasil CF </a></li>
+                <li><a href="{% url 'masakerja:totalsf' %}"><i class="fa fa-circle-o"></i> Hasil SF </a></li>
+                <li><a href="{% url 'masakerja:total' %}"><i class="fa fa-circle-o"></i> Nilai Total </a></li>
+
+
+            </ul>
+        </li>
+        <li class="treeview menu-open">
+                <a href="#">
+                    <i class="fa fa-database" aria-hidden="true"></i><span>Pendidikan Terakhir</span>
+                    <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+                </a>
+                <ul class="treeview-menu" style="display: block;">
+                    
+                    <li><a href="{% url 'pendidikanterakhir:view' %}"><i class="fa fa-circle-o"></i> Nilai Pendidikan Terakhir</a></li>
+                    <li><a href="{% url 'pendidikanterakhir:cf' %}"><i class="fa fa-circle-o"></i> Nilai Core Factor </a></li>
+                    <li><a href="{% url 'pendidikanterakhir:sf' %}"><i class="fa fa-circle-o"></i> Nilai Secondary Factor </a></li>
+                    <li><a href="{% url 'pendidikanterakhir:totalcf' %}"><i class="fa fa-circle-o"></i> Hasil CF </a></li>
+                    <li><a href="{% url 'pendidikanterakhir:totalsf' %}"><i class="fa fa-circle-o"></i> Hasil SF </a></li>
+                    <li><a href="{% url 'pendidikanterakhir:total' %}"><i class="fa fa-circle-o"></i> Nilai Total </a></li>
+
+
+                </ul>
+            </li>
+            <li class="treeview menu-open">
+                    <a href="#">
+                        <i class="fa fa-database" aria-hidden="true"></i><span>Prilaku</span>
+                        <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                    </a>
+                    <ul class="treeview-menu" style="display: block;">
+                        
+                        <li><a href="{% url 'prilaku:view' %}"><i class="fa fa-circle-o"></i> Nilai Prilaku</a></li>
+                        <li><a href="{% url 'prilaku:cf' %}"><i class="fa fa-circle-o"></i> Nilai Core Factor </a></li>
+                        <li><a href="{% url 'prilaku:sf' %}"><i class="fa fa-circle-o"></i> Nilai Secondary Factor </a></li>
+                        <li><a href="{% url 'prilaku:totalcf' %}"><i class="fa fa-circle-o"></i> Hasil CF </a></li>
+                        <li><a href="{% url 'prilaku:totalsf' %}"><i class="fa fa-circle-o"></i> Hasil SF </a></li>
+                        <li><a href="{% url 'prilaku:total' %}"><i class="fa fa-circle-o"></i> Nilai Total </a></li>
+    
+    
+                    </ul>
+                </li>
+
+                <li class="treeview menu-open">
+                        <a href="#">
+                            <i class="fa fa-database" aria-hidden="true"></i><span>Sikap Kerja</span>
+                            <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                        </a>
+                        <ul class="treeview-menu" style="display: block;">
+                            
+                            <li><a href="{% url 'sikapkerja:view' %}"><i class="fa fa-circle-o"></i> Nilai Sikap Kerja</a></li>
+                            <li><a href="{% url 'sikapkerja:cf' %}"><i class="fa fa-circle-o"></i> Nilai Core Factor </a></li>
+                            <li><a href="{% url 'sikapkerja:sf' %}"><i class="fa fa-circle-o"></i> Nilai Secondary Factor </a></li>
+                            <li><a href="{% url 'sikapkerja:totalcf' %}"><i class="fa fa-circle-o"></i> Hasil CF </a></li>
+                            <li><a href="{% url 'sikapkerja:totalsf' %}"><i class="fa fa-circle-o"></i> Hasil SF </a></li>
+                            <li><a href="{% url 'sikapkerja:total' %}"><i class="fa fa-circle-o"></i> Nilai Total </a></li>
+        
+        
+                        </ul>
+                    </li>
+                    <li class="treeview menu-open">
+                        <a href="#">
+                            <i class="fa fa-database" aria-hidden="true"></i><span>Rangking</span>
+                            <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                        </a>
+                        <ul class="treeview-menu" style="display: block;">
+                            <li><a href="{% url 'perangkingan:view' %}"><i class="fa fa-circle-o"></i> Hasil Rangking</a></li>
+                            
+                        </ul>
+                    </li>
+        <li class="header"></li>
+</section>
+<!-- /.sidebar -->
+</aside>

@@ -1,0 +1,34 @@
+<div class="box">
+        <div class="box-body">
+            <div class="box-header">
+                <h3 class="box-title">Nalai Sikap Kerja</h3>
+            </div>
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Energi Psikis</th>
+                        <th>Ketelitian</th>
+                        <th>Kehati-hatian</th>
+                        <th>Pengendalian Prasaan</th>
+                        <th>Dorongan berprestasi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for n in nlp %}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{n.0}}</td>
+                        <td>{{n.1}}</td>
+                        <td>{{n.2}}</td>
+                        <td>{{n.3}}</td>
+                        <td>{{n.4}}</td>
+                        <td>{{n.5}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <!-- /.box-body -->
+    </div>

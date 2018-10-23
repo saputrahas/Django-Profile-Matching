@@ -1,0 +1,34 @@
+<div class="box">
+    <div class="box-body">
+        <div class="box-header">
+            <h3 class="box-title">Karyawan</h3>
+        </div>
+        <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>ID</th>
+                    <th>Nama</th>
+                    <th>NIP</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Tanggal lahir</th>
+                    <th>Agama</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for kr in karyawan %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{kr.id}}</td>
+                    <td>{{kr.nama}}</td>
+                    <td>{{kr.NIP}}</td>
+                    <td>{{kr.jenis_kelamin}}</td>
+                    <td>{{kr.born_date}}</td>
+                    <td>{{kr.agama}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <!-- /.box-body -->
+</div>

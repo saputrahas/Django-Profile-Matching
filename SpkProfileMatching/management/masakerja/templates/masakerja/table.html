@@ -1,0 +1,42 @@
+<div class="box">
+        <div class="box-body">
+            <div class="box-header">
+                <h3 class="box-title">Nalai Masa Kerja</h3>
+            </div>
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>0-4 Tahun</th>
+                        <th>5-8 Tahun</th>
+                        <th>9-12 Tahun</th>
+                        <th>13-16 Tahun</th>
+                        <th>17-20 Tahun</th>
+                        <th>21-24 Tahun</th>
+                        <th>25-28 Tahun</th>
+                        <th>29-32 Tahun</th>
+                        <th>33-36 Tahun</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for n in nlm %}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{n.0}}</td>
+                        <td>{{n.1}}</td>
+                        <td>{{n.2}}</td>
+                        <td>{{n.3}}</td>
+                        <td>{{n.4}}</td>
+                        <td>{{n.5}}</td>
+                        <td>{{n.6}}</td>
+                        <td>{{n.7}}</td>
+                        <td>{{n.8}}</td>
+                        <td>{{n.9}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <!-- /.box-body -->
+    </div>

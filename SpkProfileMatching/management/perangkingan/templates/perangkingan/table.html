@@ -1,0 +1,38 @@
+<div class="box">
+        <div class="box-body">
+            <div class="box-header">
+                <h3 class="box-title">Nilai Rangking</h3>
+                <div align="right">
+                        <a href="{% url 'perangkingan:report' %}">
+                           <button class="btn btn-info"><i class="fa fa-print"></i> Print</button>
+                        </a>
+                    </div>
+            </div>
+            <table id="example" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Hasil Rangking</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for c in nl %}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{c.0}}</td>
+                        <td>{{c.1}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <!-- /.box-body -->
+    </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    $('#example').DataTable();
+</script>

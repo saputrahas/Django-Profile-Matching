@@ -1,0 +1,52 @@
+{% extends 'layout/dashboard/index.html' %} {% block content %}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+           Hasil Nilai Masa Kerja 
+            <small>Template</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i>Hasil Nilai Masa Kerja</a></li>
+            <li class="active">Template</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+<div class="box">
+        <div class="box-body">
+            <div class="box-header">
+                <h3 class="box-title">Nilai Core Factor</h3>
+            </div>
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Nilai CF</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for c in totalcf %}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{c.0}}</td>
+                        <td>{{c.1}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <!-- /.box-body -->
+    </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#example1').DataTable( {
+            "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50,]]
+        } );
+    } );
+</script>
+{% endblock %}

@@ -1,0 +1,36 @@
+<div class="box">
+        <div class="box-body">
+            <div class="box-header">
+                <h3 class="box-title">Nalai Pendidikan Terakhir</h3>
+            </div>
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>SD</th>
+                        <th>SMP</th>
+                        <th>SMA</th>
+                        <th>DIII</th>
+                        <th>S1</th>
+                        <th>S2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for n in nlp %}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{n.0}}</td>
+                        <td>{{n.1}}</td>
+                        <td>{{n.2}}</td>
+                        <td>{{n.3}}</td>
+                        <td>{{n.4}}</td>
+                        <td>{{n.5}}</td>
+                        <td>{{n.6}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <!-- /.box-body -->
+    </div>
